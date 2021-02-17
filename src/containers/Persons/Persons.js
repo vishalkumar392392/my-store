@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
 import * as actionTypes from "../../store/actions/index";
 import Person from "../../components/Person/Person";
 import axios from "../../axios";
+
 function Persons(props) {
   useEffect(() => {
     props.onSetPersons();
@@ -20,7 +22,44 @@ function Persons(props) {
     );
   });
 
-  return <div>{persons}</div>;
+  const downloadSheet = () => {
+    console.log("downloadsheet");
+  };
+
+  const download = (
+    <div style={{ textAlign: "right", marginRight: "100px" }}>
+      {/* <button>Customer Excelsheet</button> */}
+      <div className="dropdown show">
+        <a
+          className="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          id="dropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Download
+        </a>
+
+        <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a onClick={downloadSheet} href="#" className="dropdown-item">
+            ExcelSheet
+          </a>
+          <a className="dropdown-item" href="#">
+            Pdf
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div>
+      {download}
+      {persons}
+    </div>
+  );
 }
 
 const mapStateToProps = (state) => {
