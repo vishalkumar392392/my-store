@@ -3,7 +3,6 @@ const initialState = {
 };
 
 const orderReducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case "SET_ORDERS":
       return {

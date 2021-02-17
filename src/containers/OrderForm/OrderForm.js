@@ -12,7 +12,6 @@ function OrderForm(props) {
       config: props.orderForm[key],
     });
   }
-  console.log(props.orderForm);
 
   const onAddOrder = (event) => {
     event.preventDefault();

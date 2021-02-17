@@ -1,0 +1,24 @@
+.Person {
+  border: 1px solid gray;
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #888;
+}
+
+.Person button {
+  background-color: #f5eef0;
+  color: black;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+.Person button:active,
+.Person button:hover {
+  background-color: #ff2058;
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+}

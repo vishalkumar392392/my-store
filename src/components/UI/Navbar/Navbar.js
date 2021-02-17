@@ -5,10 +5,7 @@ import img from "../../../assests/download.jpg";
 const navbar = (props) => {
   return (
     <div>
-      <nav
-        className="navbar navbar-expand-md navbar-light fixed-top py-4 "
-        id="main-nav"
-      >
+      <nav className="navbar navbar-expand-md navbar-light py-4 " id="main-nav">
         <div className="container">
           <a href="#home" className="navbar-brand">
             <img
@@ -40,9 +37,9 @@ const navbar = (props) => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/" className="nav-link">
+                <NavLink to="/customers" className="nav-link">
                   Customers
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
                 <a href="/" className="nav-link">
