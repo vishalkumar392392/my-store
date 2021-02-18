@@ -42,9 +42,9 @@ const navbar = (props) => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/" className="nav-link">
+                <NavLink to="/address" className="nav-link">
                   Address
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

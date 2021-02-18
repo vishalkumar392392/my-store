@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import * as actionTypes from "../../store/actions/index";
 import Person from "../../components/Person/Person";
 import axios from "../../axios";
-
+import Search from "../../components/UI/Search/Search";
 function Persons(props) {
+  const [filterPer, setFilterPer] = useState([]);
+
   useEffect(() => {
     props.onSetPersons();
   }, []);
@@ -64,11 +66,18 @@ function Persons(props) {
       </div>
     </div>
   );
-
+  const searchPersons = (value) => {
+    if (value !== null) {
+      setFilterPer(value);
+    } else {
+      setFilterPer([]);
+    }
+  };
   return (
     <div>
+      <Search search={(value) => searchPersons(value)} />
       {download}
-      {persons}
+      {filterPer.length === 0 ? persons : filterPer}
     </div>
   );
 }

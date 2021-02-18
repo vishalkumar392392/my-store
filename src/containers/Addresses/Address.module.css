@@ -1,0 +1,18 @@
+.Address {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 50%;
+  text-align: left;
+  padding-left: 30px;
+  border-radius: 5px;
+  font-weight: lighter;
+  transition: background-color 0.5s color 0.5s font-weight 1s;
+}
+
+.Address:hover,
+.Address:active {
+  color: rgba(51, 11, 11, 0.74);
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+  cursor: pointer;
+}

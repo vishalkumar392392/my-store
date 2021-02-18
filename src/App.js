@@ -7,6 +7,7 @@ import Success from "./components/Success/Success";
 import Orders from "./containers/Orders/Orders";
 import Persons from "./containers/Persons/Persons";
 import Details from "./components/Details/Details";
+import Addresses from "./containers/Addresses/Addresses";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/orders" component={Orders} />
           <Route path="/customers" component={Persons} />
           <Route path="/details/:id" component={Details} />
+          <Route path="/address" component={Addresses} />
           <Route path="/" component={OrderForm} />
         </Switch>
       </div>
