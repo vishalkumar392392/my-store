@@ -23,7 +23,18 @@ function Persons(props) {
   });
 
   const downloadSheet = () => {
-    console.log("downloadsheet");
+    axios({
+      url: "/excel",
+      method: "GET",
+      responseType: "blob", // important
+    }).then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "Customers.xlsx"); //or any other extension
+      document.body.appendChild(link);
+      link.click();
+    });
   };
 
   const download = (
