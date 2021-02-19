@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
 import * as actionTypes from "../../store/actions/index";
 import Person from "../../components/Person/Person";
 import axios from "../../axios";
@@ -69,8 +68,6 @@ function Persons(props) {
   const searchPersons = (value) => {
     if (value !== null) {
       setFilterPer(value);
-    } else {
-      setFilterPer([]);
     }
   };
   return (

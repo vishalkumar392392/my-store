@@ -9,6 +9,12 @@
   box-shadow: 0 0 5px #888;
 }
 
+.Person:active,
+.Person:hover {
+  background-color: lightgoldenrodyellow;
+  cursor: pointer;
+}
+
 .Person button {
   background-color: #f5eef0;
   color: black;
